@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  gs-messaging-rabbitmq-app:
+    image: gs-messaging-rabbitmq:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8087:8080"
+    volumes:
+      - /data/gs-messaging-rabbitmq-app
